@@ -1,4 +1,4 @@
-## Welcome to Sherry's study summary
+## Welcome to Sherry's Web Work
 
 You can use the [HTML](##html学习总结) to see HTMLstudy summary.
 
@@ -8,7 +8,7 @@ You can use the [JavaScript](#javascript学习总结) to see JavaScript study su
 
 You can use the [TypeScript](#typescript学习总结) to see TypeScript study summary.
 
-You can use the [结课作业](login.html) to see Final project.
+You can choose the [结课作业](login.html) to see my Final project.
 
 # HTML学习总结
 - [HTML学习总结](#html学习总结)
