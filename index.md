@@ -8,7 +8,7 @@ You can use the [JavaScript](#javascript学习总结) to see JavaScript study su
 
 You can use the [TypeScript](#typescript学习总结) to see TypeScript study summary.
 
-You can choose the [结课作业](login.html) to see my Final project.
+You can choose the [结课作业](login.html) to see my Final project.（登录页面可以不需要账号、密码，直接点击登录）
 
 # HTML学习总结
 - [HTML学习总结](#html学习总结)
