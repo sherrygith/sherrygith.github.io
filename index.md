@@ -1,10 +1,14 @@
-## Welcome to Sherry's HTML&CSS study summary
+## Welcome to Sherry's study summary
 
 You can use the [HTML](##html学习总结) to see HTMLstudy summary.
 
 You can use the [CSS](#css学习总结) to see CSS study summary.
 
-# HTML
+You can use the [JavaScript](#css学习总结) to see JavaScript study summary.
+
+You can use the [TypeScript](#css学习总结) to see TypeScript study summary.
+
+# HTML学习总结
 - [HTML学习总结](#html学习总结)
     - [HTML介绍](#html介绍)
       - [定义](#定义)
@@ -602,3 +606,264 @@ Content(内容) - 盒子的内容，显示文本和图像。
     padding-left: 80px;
     padding: 25px 50px 75px 100px; /* 简写形式，按上，右，下，左顺序设置 */
     padding: 25px 10px; /* 简写形式，上下为25px，左右为10px */
+## JavaScript学习总结
+
+[TOC]
+### JavaScript介绍
+#### 概括介绍
+JavaScript 是 Web 的编程语言。
+所有现代的 HTML 页面都可以使用 JavaScript。
+#### 组成
+一个完整的JavaScript实现应该由ECMAScript、DOM、BOm三部分构成。
+#### 特点
+* 解释型语言
+  
+  JavaScript是一门解释型语言，所谓解释型值语言是指不需要被编译为机器码在执行，而是直接执行。
+
+* 动态语言
+JavaScript是一门动态语言，所谓的动态语言可以暂时理解为在语言中的一切内容都是不确定的。
+
+* 基于原型的面向对象
+  Java也是一门面向对象的语言，但是与Java不同JavaScript是基于原型的面向对象。
+* 严格区分大小写
+  
+  JavaScript是严格区分大小写。
+
+  ### 使用
+  #### 标签引用
+  在HTML中在script标签中就可以编写JavaScript代码，如下：
+
+        <script>
+             alert("Hello,JS!");
+         </script>
+
+#### 文件引用
+在一个单独的js文件中也可以编写JavaScript代码，然后在HTML文件中使用script标签进行引用
+
+如下：
+
+     <script src="index.js"></script>
+
+### 基本语法
+
+#### 变量
+变量的声明： 使用var关键字声明一个变量。
+
+变量的赋值： 使用=为变量赋值。
+#### 字面量
+
+字面量实际上就是一些固定的值，比如：1、2 、3，字面量都是不可以改变的。
+#### 运算符
+
+运算符也叫操作符，通过运算符可以对一个或多个值进行运算并获取运算结果。
+
+##### 算数运算符
+算术运算符用于表达式计算。
+例：
+
+|运算符|语义|
+|:-----:|:-----:|
+|+|加法|
+|-|减法|
+|*|乘法|
+|++|自增|
+
+##### 关系运算符
+关系运算符在逻辑语句中使用，以测定变量或值是否相等。
+例：
+|运算符|语义|
+|:-----:|:-----:|
+|>|大于|
+|<|小于|
+|>=|大于等于|
+|<=|小于等于|
+##### 赋值运算符
+赋值运算符用于给 JavaScript 变量赋值。
+|运算符|语义|
+|:-----:|:-----:|
+|=|x=y|
+|+=|x+=y|
+|/=|x/=y|
+##### 逻辑运算符
+逻辑运算符用于测定变量或值之间的逻辑。
+|运算符|语义|
+|:-----:|:-----:|
+|&&|大于|
+|\|\||小于|
+|！|大于等于|
+##### 比较运算符
+
+比较运算符用来比较两个值是否相等，如果相等会返回true，否则返回false。
+
+##### 条件运算符
+JavaScript 还包含了基于某些条件对变量进行赋值的条件运算符。
+
+语法：variablename=(condition)?value1:value2;
+
+举例：result=(age<18)?"年龄太小":"年龄合适";
+
+执行流程：如果condition为true，则执行语句1，并返回执行结果，如果为false，则执行语句2，并返回执行结果。
+
+### 数据类型
+#### 基本数据类型
+
+JavaScript中一共有5种基本数据类型：String、Number、 Boolean、Undefined、Null。
+
+基本数据类型的值是无法修改的，是不可变的。
+
+基本数据类型的比较是值的比较，也就是只要两个变量的值相等，我们就认为这两个变量相等。
+#### 引用数据类型
+引用类型的值是保存在内存中的对象。
+
+当一个变量是一个对象时，实际上变量中保存的并不是对象本身，而是对象的引用。
+
+当从一个变量向另一个变量复制引用类型的值时，会将对象的引用复制到变量中，并不是创建一个新的对象。
+
+这时，两个变量指向的是同一个对象。因此，改变其中一个变量会影响另一个。
+
+### 函数
+创建语法：
+
+    var 函数名 = new Function("执行语句");
+
+### 对象
+
+#### 数组对象
+数组也是对象的一种，数组是一种用于表达有顺序关系的值的集合的语言结构，也就是同类数据元素的有序集合。
+
+数组的存储性能比普通对象要好，在开发中我们经常使用数组来存储一些数据。
+
+#### 建立数组对象
+##### 使用对象创建
+* 同类型有序数组
+语法：
+
+    var arr = new Array();
+* 不同类型有序数组
+语法：
+     var arr = new Arra();
+##### 使用字面量创建
+
+* 同类型有序数组
+  语法：
+
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+* 不同类型有序数组
+语法：
+   
+      var arr = [1, "2", 3, "4", 5, "6", 7, "8", 9];
+#### 数组属性
+constructor属性：返回创建数组对象的原型函数。
+
+constructor属性：返回创建数组对象的原型函数。
+#### 数组方法
+* push()方法：该方法可以向数组的末尾添加一个或多个元素，并返回数组的新的长度。
+
+* pop()方法：该方法可以删除数组的最后一个元素，并将被删除的元素作为返回值返回。
+
+* unshift()方法：该方法向数组开头添加一个或多个元素，并返回新的数组长度
+* forEach()方法：该方法可以用来遍历数组。
+## TypeScript学习总结
+[TOC]
+### typescript介绍
+#### 什么是typescript
+TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准（ES6 教程）。
+
+TypeScript 由微软开发的自由和开源的编程语言。
+
+TypeScript 设计目标是开发大型应用，它可以编译成纯 JavaScript，编译出来的 JavaScript 可以运行在任何浏览器上。
+#### 特点
+TypeScript 是一种给 JavaScript 添加特性的语言扩展。增加的功能包括：
+* 类型批注和编译时类型检查
+* 类型推断
+* 类型擦除
+* 接口
+* 枚举
+* Mixin
+* 泛型编程
+* 名字空间
+* 元组
+* Await
+#### 区别
+
+TypeScript 是 JavaScript 的超集，扩展了 JavaScript 的语法，因此现有的 JavaScript 代码可与 TypeScript 一起工作无需任何修改，TypeScript 通过类型注解提供编译时的静态类型检查。
+
+TypeScript 可处理已有的 JavaScript 代码，并只对其中的 TypeScript 代码进行编译。
+
+### 数据类型
+#### 变量
+语法：
+let 变量名: 变量类型 = 初始化值;
+
+或
+
+let 变量名: 变量类型 | undefined;
+变量名 = 变量值;
+
+#### 布尔类型
+
+语法：
+
+     let flag: boolean = true;
+     console.log(flag);
+
+#### 数字类型
+|类型|语法|说明|
+|:------:|:-------:|:----------:|
+|整数型|let num: number = 123;console.log(num);|
+|浮点型|let num: number = 3.1415926;console.log(num);|
+|字符串|let str: string = "Hello,TypeScript"；console.log(str);|
+|数组|let arr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];console.log(arr);|
+|元祖|/|元组属于数组的一种，元组中的元素可以不必全部保持类型一致|
+|枚举|enum 枚举名 {标识符[= 整型常数/字符串]};|事先考虑到某一变量可能取的值，尽量用自然语言中含义清楚的单词来表示它的每一个值，这种方法称为枚举方法，用这种方法定义的类型称枚举类型。|
+|null|let n: null = null;|||
+|void|function success():void {console.log('执行成功了，我不需要返回值');}|TypeScript 中的 void 类型表示没有任何类型，一般用于定义方法的时候方法没有返回值。|
+|never|function error(): never {throw new Error('抛出错误了');}|TypeScript 中的 never 类型是任何类型的子类型，也可以赋值给任何类型，但是没有类型是 never 的子类型或可以赋值给 never 类型， 即使 any 类型也不可以赋值给never。这意味着声明 never 类型的变量只能被 never 类型所赋值。|
+|组合|let num: number | null | undefined;|TypeScript 中支持一个变量可以赋予多种不同的变量类型，多个变量类型使用 \| 分隔。|
+### 函数
+语法：
+    
+    function 函数名(参数列表): 返回值类型 {
+    函数体 ...
+    [return 返回值;]
+    }
+
+或
+
+    let 函数名 = function (参数列表): 返回值类型 {
+    函数体 ...
+    [return 返回值;]
+    };
+#### 必选参数
+在调用函数的时候，必须要传入的参数，参数列表里边的参数默认就是必选参数，只要在声明的时候写了参数，在传递的时候，就必须传入参数，而且，实参与形参的数量与类型要一致。
+#### 可选参数
+为了解决在函数传参的时候，某些参数可以不用传递，我们就需要可选参数了。
+
+#### 默认参数
+为了解决在函数传参的时候，某些参数可以不用传递，但是我们又需要该参数的值，这时候我们就需要给这个参数设定一个默认值也叫初始化值，就得用到默认参数了。
+#### 剩余参数
+在参数的类型确定而参数个数不确定的情况时，我们需要用到剩余参数，它使用 ... 将接收到的参数传到一个指定类型的数组中。
+#### 重载函数
+重载指的是两个或者两个以上同名函数，但它们的参数不一样，这时会出现函数重载的情况。
+
+### 类
+#### 定义
+语法如下：
+
+       class Person {
+    name: string;//属性，前面省略了public关键词
+
+    constructor(n: string) {//构造函数，实例化类的时候触发的方法
+        this.name = n;//使用this关键字为当前类的name属性赋值
+    }
+
+    run(): void {//方法
+        console.log(this.name+ "在跑步");
+    }
+    }
+
+     var p = new Person("张三");
+     p.run();
+#### 继承
+
+类的继承：在 TypeScript 中要想实现继承使用 extends 关键字，只要一旦实现了继承关系，那么子类中便拥有了父类的属性和方法，而在执行方法过程中，首先从子类开始找，如果有，就使用，如果没有，就去父类中找。类的继承只能单向继承。
