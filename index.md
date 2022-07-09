@@ -606,8 +606,8 @@ Content(内容) - 盒子的内容，显示文本和图像。
     padding-left: 80px;
     padding: 25px 50px 75px 100px; /* 简写形式，按上，右，下，左顺序设置 */
     padding: 25px 10px; /* 简写形式，上下为25px，左右为10px */
+	
 ## JavaScript学习总结
-
 - [JavaScript学习总结](#javascript学习总结)
   - [JavaScript介绍](#javascript介绍)
     - [概括介绍](#概括介绍)
