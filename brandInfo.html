@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ecAdmin</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a class="icon-bar" href="home.html">ecAdmin系统</a>
+                </li>
+                <li class="active"><a href="#">基本管理</a>
+                </li>
+                <li ><a href="goods.html">商品展示</a>
+</li>
+<li ><a href="report.html">查看报告</a>
+</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>欢迎您,admin</a>
+                </li>
+                <li><a href="login.html">安全退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--Main layout-->
+<main class="mt-5">
+    <!--Main container-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2" id="menulist">
+                <a href="home.html" class="list-group-item">
+                    <!-- 小图标样式设置 -->
+                    商品信息</a>
+                <a href="brandInfo.html" class="list-group-item  active" >
+                    商品品牌 </a>
+                <a href="supplier.html" class="list-group-item">
+                    商品供应商</a>
+            </div>
+            <!--左边菜单栏-->
+            <div class="col-sm-10" id="right">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">基本管理/商品品牌</h3>
+                    </div>
+                </div>
+                    <div class=" jumbotron">
+              
+                        <h1>
+                            Hello, Administrators!
+                        </h1>
+                        <p>
+                            This is the brand management of the e-commerce management platform, where you can query, add, delete, and modify the brand. 
+                        </p>
+                        <p>
+                            <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                        </p>
+                    </div>
+                
+              
+
+            </div>
+        </div>
+    </div>
+
+    <!--Main container-->
+</main>
+
+<ul class="pagination" style="float: right;">
+    <li><a href="#">&laquo;</a>
+    </li>
+    <li class="active"><a href="#">1</a>
+    </li>
+    <li class="disabled"><a href="#">2</a>
+    </li>
+    <li><a href="#">3</a>
+    </li>
+    <li><a href="#">4</a>
+    </li>
+    <li><a href="#">5</a>
+    </li>
+    <li><a href="#">&raquo;</a>
+    </li>
+</ul>
+<!-- 底部页脚部分 -->
+<div class="footer">
+    <p class="text-center">
+        2022 &copy; ecAdmin.
+    </p>
+</div>
+</body>
+<script>
+
+    $('#serGoods').on("click",function(){
+        var goodsname=$('#goodsname').val()
+        var d={
+            "goodsname":goodsname
+        }
+        var url="/getGoodsList"
+        alert("!!!!")
+        $.ajax({
+            type: "post",
+            url: url,
+            dataType: "json",
+            data: d,
+            success: function (data) {
+                alert("data")
+                    showData(data)
+
+            },
+            error: function () {
+                alert("aorry!can't use DB")
+            }
+        })
+    })
+    function showData(data) {
+
+        var str = "";//定义用于拼接的字符串
+
+        for (var i = 0; i < data.length; i++) {
+            //拼接表格的行和列
+            str = "<tr><td>" + data[i].code + "</td><td>" + data[i].name +"</td><td>"+data[i].type+"</td><td>"+data[i].rank+"</td><td>"+data[i].classify+"</td><td>"+data[i].brand+ "</td><td>"+data[i].supplier+"</td><td>"+data[i].mPrice+"</td><td>"+data[i].sPrice+"</td><td>"+data[i].cPrice+"</td><td>"+data[i].stock+"</td></tr>";
+            //追加到table中
+            $("#tab").append(str)
+        }
+
+    }
+</script>
+</html>
