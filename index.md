@@ -4,9 +4,9 @@ You can use the [HTML](##html学习总结) to see HTMLstudy summary.
 
 You can use the [CSS](#css学习总结) to see CSS study summary.
 
-You can use the [JavaScript](#css学习总结) to see JavaScript study summary.
+You can use the [JavaScript](#javascript学习总结) to see JavaScript study summary.
 
-You can use the [TypeScript](#css学习总结) to see TypeScript study summary.
+You can use the [TypeScript](#typescript学习总结) to see TypeScript study summary.
 
 # HTML学习总结
 - [HTML学习总结](#html学习总结)
@@ -608,7 +608,35 @@ Content(内容) - 盒子的内容，显示文本和图像。
     padding: 25px 10px; /* 简写形式，上下为25px，左右为10px */
 ## JavaScript学习总结
 
-[TOC]
+- [JavaScript学习总结](#javascript学习总结)
+  - [JavaScript介绍](#javascript介绍)
+    - [概括介绍](#概括介绍)
+    - [组成](#组成)
+    - [特点](#特点)
+  - [使用](#使用)
+    - [标签引用](#标签引用)
+    - [文件引用](#文件引用)
+  - [基本语法](#基本语法)
+    - [变量](#变量)
+    - [字面量](#字面量)
+    - [运算符](#运算符)
+      - [算数运算符](#算数运算符)
+      - [关系运算符](#关系运算符)
+      - [赋值运算符](#赋值运算符)
+      - [逻辑运算符](#逻辑运算符)
+      - [比较运算符](#比较运算符)
+      - [条件运算符](#条件运算符)
+  - [数据类型](#数据类型)
+    - [基本数据类型](#基本数据类型)
+    - [引用数据类型](#引用数据类型)
+  - [函数](#函数)
+  - [对象](#对象)
+    - [数组对象](#数组对象)
+    - [建立数组对象](#建立数组对象)
+      - [使用对象创建](#使用对象创建)
+      - [使用字面量创建](#使用字面量创建)
+    - [数组属性](#数组属性)
+    - [数组方法](#数组方法)
 ### JavaScript介绍
 #### 概括介绍
 JavaScript 是 Web 的编程语言。
@@ -764,7 +792,24 @@ constructor属性：返回创建数组对象的原型函数。
 * unshift()方法：该方法向数组开头添加一个或多个元素，并返回新的数组长度
 * forEach()方法：该方法可以用来遍历数组。
 ## TypeScript学习总结
-[TOC]
+- [TypeScript学习总结](#typescript学习总结)
+  - [typescript介绍](#typescript介绍)
+    - [什么是typescript](#什么是typescript)
+    - [特点](#特点)
+    - [区别](#区别)
+  - [数据类型](#数据类型)
+    - [变量](#变量)
+    - [布尔类型](#布尔类型)
+    - [数字类型](#数字类型)
+  - [函数](#函数)
+    - [必选参数](#必选参数)
+    - [可选参数](#可选参数)
+    - [默认参数](#默认参数)
+    - [剩余参数](#剩余参数)
+    - [重载函数](#重载函数)
+  - [类](#类)
+    - [定义](#定义)
+    - [继承](#继承)
 ### typescript介绍
 #### 什么是typescript
 TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准（ES6 教程）。
